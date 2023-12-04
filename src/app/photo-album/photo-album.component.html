@@ -1,0 +1,50 @@
+<div class="m-2 space-y-4">
+  <h1 class="text-5xl font-bold">Photo Album</h1>
+  <p class="m-2">
+    This page shows how to display images uploaded to your Cloudinary account.
+  </p>
+  <div class="m-2">
+    Please note that the following defaults are being used:
+    <ul class="list-disc list-inside">
+      <li>
+        Images are using the
+        <code class="bg-black text-gray-100 px-2 py-1 rounded-md text-sm">
+          responsive()
+        </code>
+        and
+        <code class="bg-black text-gray-100 px-2 py-1 rounded-md text-sm">
+          placeholder()
+        </code>
+        plugins
+      </li>
+      <li>
+        Images tagged as
+        <code class="bg-black text-gray-100 px-2 py-1 rounded-md text-sm">
+          myphotoalbum-angular
+        </code>
+        are displayed.
+      </li>
+      <li>
+        Images are transformed using the following actions:
+        <code
+          class="bg-black text-gray-100 px-2 py-1 rounded-md text-sm whitespace-normal overflow-auto break-words"
+        >
+          .resize(thumbnail().width(300).height(300).gravity(autoGravity())).delivery(format(&apos;auto&apos;)).delivery(quality(&apos;auto&apos;));
+        </code>
+        .
+      </li>
+    </ul>
+  </div>
+  <div class="flex flex-wrap -mx-4">
+    @for (photo of photos; track photo.public_id) {
+    <div class="lg:w-1/3 md:w-1/2 w-full p-4">
+      <app-cld-image [publicId]="photo.public_id"></app-cld-image>
+    </div>
+    } @empty {
+    <p class="text-xl p-4">
+      No photos to list. Please make sure that you have uploaded some images
+      using this app.
+    </p>
+    }
+  </div>
+</div>
