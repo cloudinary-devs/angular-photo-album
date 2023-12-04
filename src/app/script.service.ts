@@ -43,7 +43,7 @@ export class ScriptService {
           resolve({ script: name, loaded: true, status: 'Loaded' });
         };
         script.onerror = (error) =>
-          resolve({ script: name, loaded: false, status: error });
+          reject({ script: name, loaded: false, status: error });
         document.getElementsByTagName('head')[0].appendChild(script);
       }
     });
