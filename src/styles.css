@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.my-cld-image > img {
+  @apply w-full h-64 object-cover max-w-sm rounded-lg shadow-2xl;
+}
