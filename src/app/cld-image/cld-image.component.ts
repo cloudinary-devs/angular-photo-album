@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CloudinaryModule, placeholder, responsive } from '@cloudinary/ng';
+import { CloudinaryModule, placeholder } from '@cloudinary/ng';
 import { Cloudinary, CloudinaryImage } from '@cloudinary/url-gen';
 import { environment } from '../../environments/environment';
 import { thumbnail } from '@cloudinary/url-gen/actions/resize';
@@ -18,7 +18,7 @@ export class CldImageComponent {
   @Input() publicId: string = '';
 
   myImage!: CloudinaryImage;
-  plugins = [responsive(), placeholder()];
+  plugins = [placeholder()];
 
   ngOnInit(): void {
     const cld = new Cloudinary({
