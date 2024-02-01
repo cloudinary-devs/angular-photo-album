@@ -29,7 +29,7 @@ From your terminal, in the root folder of your project, run:
 * `npm i`
 * `(npx) ng serve` or `(npx) ng build`
 
-Then, click the localhost link to open the app in your browser, or open a browser and navigate to localhost:3000 or to the port displayed in the terminal.
+Then, click the localhost link to open the app in your browser, or open a browser and navigate to localhost:4200 or to the port displayed in the terminal.
 
 Try uploading images using each of the upload tabs, then see your images displayed in the Photo Album tab.
 
