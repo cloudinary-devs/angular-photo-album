@@ -1,4 +1,5 @@
 # Introduction
+
 This project demonstrates how to use the [Cloudinary Angular SDK](https://cloudinary.com/documentation/angular_integration) to create a photo album app. 
 
 The sample project showcases the following functionality:
@@ -10,6 +11,7 @@ The sample project showcases the following functionality:
 # Setup
 
 [Create an unsigned upload preset](https://cloudinary.com/documentation/upload_presets#creating_and_managing_upload_presets) in your Cloudinary product environment and make a note of the name of the unsigned upload preset as well as your Cloudinary cloud name.
+
 
 Create `/src/environments/environment.ts` with the following content:
 
@@ -38,5 +40,3 @@ Try uploading images using each of the upload tabs, then see your images display
 * Ask for help in our [Community Forum](https://community.cloudinary.com/), in [Discord](https://discord.gg/Cloudinary), or [raise a support request](https://support.cloudinary.com/hc/en-us/requests/new).
 
 Feel free to fork this repo as a starting point for your own Angular app, contribute to it, or star it if you like it!
-
-
